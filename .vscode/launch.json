@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "ConexionDB",
+            "request": "launch",
+            "mainClass": "com.amr_rent_car.Model.ConexionDB",
+            "projectName": "demo"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)",
+            "request": "launch",
+            "mainClass": "com.amr_rent_car.main",
+            "projectName": "RentCar",
+            "args": ""
+        }
+    ]
+}
