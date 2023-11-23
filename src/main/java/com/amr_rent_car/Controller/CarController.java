@@ -5,7 +5,7 @@ import com.amr_rent_car.Classes.Car;
 import com.amr_rent_car.Model.CarModel;
 
 public class CarController {
-    private CarModel carModel;
+    private final CarModel carModel;
 
     public CarController() {
         this.carModel = new CarModel();

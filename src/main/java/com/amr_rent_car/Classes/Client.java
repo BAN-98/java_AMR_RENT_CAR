@@ -2,32 +2,30 @@ package com.amr_rent_car.Classes;
 
 public class Client extends Person {
 
-    private int idCliente;
-    private String direccion, email;
+    private int idClient;
+    private String direction, email;
 
-    public Client(int idPerson, String name, String lastName, String phoneNumber, int idCliente, String direccion,
-            String email) {
+    public Client(int idPerson, String name, String lastName, String phoneNumber, int idClient, String direction,
+                  String email) {
         super(idPerson, name, lastName, phoneNumber);
-        this.idCliente = idCliente;
-        this.direccion = direccion;
+        this.idClient = idClient;
+        this.direction = direction;
         this.email = email;
     }
 
-    public void setIdCliente(int cliente) {
-        this.idCliente = cliente;
+    public void setIdClient(int client) {
+        this.idClient = client;
     }
 
-    public int getIdCliente() {
-        return this.idCliente;
+    public int getIdClient() {
+        return this.idClient;
     }
 
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
+    public void setDirection(String direction) {
+        this.direction = direction;
     }
 
-    public String getDireccion() {
-        return this.direccion;
-    }
+    public String getDirection() {return this.direction;}
 
     public void setEmail(String email) {
         this.email = email;
@@ -39,7 +37,7 @@ public class Client extends Person {
 
     @Override
     public String toString() {
-        return "Cliente [idCliente=" + idCliente + ", direccion=" + direccion + ", email=" + email + "]";
+        return "Client [idClient=" + idClient + ", direction=" + direction + ", email=" + email + "]";
     }
 
 }

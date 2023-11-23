@@ -4,13 +4,13 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class DBConect {
+public class DBConnect {
     private static Connection connection = null;
     private static final String URL = "jdbc:mysql://localhost:3306/amr_rent_car";
     private static final String USERNAME = "root";
     private static final String PASSWORD = "";
 
-    public DBConect() {}
+    public DBConnect() {}
 
     public static Connection connect() throws SQLException {
         try {
@@ -19,7 +19,7 @@ public class DBConect {
                 connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
             }
         } catch (ClassNotFoundException | SQLException e) {
-            // Lanzar una excepción para manejarla en el código que utiliza esta clase
+            // Lazar una exception para manejarla en el código que utiliza esta clase
             throw new SQLException("Error al conectar a la base de datos", e);
         }
         return connection;

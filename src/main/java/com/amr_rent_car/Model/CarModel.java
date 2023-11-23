@@ -12,7 +12,7 @@ public class CarModel {
     public boolean create(Car car) {
         try {
             String query = "INSERT INTO amr_cars (id_car, brand, model_car, car_reg, age, status, corlorCar, typeCar, priceCar) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
-            PreparedStatement preparedStatement = DBConect.connect().prepareStatement(query);
+            PreparedStatement preparedStatement = DBConnect.connect().prepareStatement(query);
             preparedStatement.setInt(1, car.getIdCar());
             preparedStatement.setString(2, car.getBrand());
             preparedStatement.setString(3, car.getModelCar());
@@ -28,7 +28,7 @@ public class CarModel {
             e.printStackTrace();
             return false;
         } finally {
-            DBConect.closeConnection();
+            DBConnect.closeConnection();
         }
     }
 
@@ -36,7 +36,7 @@ public class CarModel {
         try {
             String query = "UPDATE amr_cars SET brand=?, model_car=?, car_reg=?, age=?, status=?, colorCar=?, typeCar=?, priceCar=? WHERE idCar=?";
 
-            try (PreparedStatement preparedStatement = DBConect.connect().prepareStatement(query)) {
+            try (PreparedStatement preparedStatement = DBConnect.connect().prepareStatement(query)) {
                 preparedStatement.setString(1, car.getBrand());
                 preparedStatement.setString(2, car.getModelCar());
                 preparedStatement.setString(3, car.getCarReg());
@@ -55,7 +55,7 @@ public class CarModel {
             e.printStackTrace();
             return false;
         } finally {
-            DBConect.closeConnection();
+            DBConnect.closeConnection();
         }
     }
 
@@ -63,7 +63,7 @@ public class CarModel {
         List<Car> listCars = new ArrayList<>();
         try {
             String query = "SELECT * FORM amr_cars";
-            PreparedStatement preparedStatement = DBConect.connect().prepareStatement(query);
+            PreparedStatement preparedStatement = DBConnect.connect().prepareStatement(query);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
                 Car car = new Car(
@@ -81,7 +81,7 @@ public class CarModel {
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
-            DBConect.closeConnection();
+            DBConnect.closeConnection();
         }
         return listCars;
     }
@@ -90,7 +90,7 @@ public class CarModel {
         Car car = null;
         try {
             String query = "SELECT * FROM amr_cars WHERE id_car=?";
-            PreparedStatement preparedStatement = DBConect.connect().prepareStatement(query);
+            PreparedStatement preparedStatement = DBConnect.connect().prepareStatement(query);
             preparedStatement.setInt(1, idCar);
             ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
@@ -108,7 +108,7 @@ public class CarModel {
         } catch (SQLException e) {
             e.getStackTrace();
         }finally{
-            DBConect.closeConnection();
+            DBConnect.closeConnection();
         }
         return car;
     }
@@ -116,14 +116,14 @@ public class CarModel {
     public boolean deleteCar(int idCar){
         try {
             String query = "DELETE FROM amr_cars WHERE id_car=?";
-            PreparedStatement preparedStatement = DBConect.connect().prepareStatement(query);
+            PreparedStatement preparedStatement = DBConnect.connect().prepareStatement(query);
             preparedStatement.setInt(1, idCar);
             preparedStatement.executeUpdate();
             return true;
         } catch (SQLException e) {
             return false;
         }finally{
-            DBConect.closeConnection();
+            DBConnect.closeConnection();
         }
 
     }
