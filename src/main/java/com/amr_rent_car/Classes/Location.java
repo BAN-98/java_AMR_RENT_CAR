@@ -21,10 +21,10 @@ public class Location {
     }
 
     public String getAddress() {
-        return address;
+        return this.address;
     }
 
-    public void setAddress(String address) {
+    public void setAddress() {
         this.address = address;
     }
 

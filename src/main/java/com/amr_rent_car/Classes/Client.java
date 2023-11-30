@@ -5,9 +5,9 @@ public class Client extends Person {
     private int idClient;
     private String direction, email;
 
-    public Client(int idPerson, String name, String lastName, String phoneNumber, int idClient, String direction,
+    public Client(String name, String lastName, String phoneNumber, int idClient, String direction,
                   String email) {
-        super(idPerson, name, lastName, phoneNumber);
+        super(name, lastName, phoneNumber);
         this.idClient = idClient;
         this.direction = direction;
         this.email = email;

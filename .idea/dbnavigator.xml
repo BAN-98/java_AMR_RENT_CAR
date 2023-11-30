@@ -13,7 +13,7 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="7a63b646-9d9b-4781-b174-3c3039a28090">
-      <console name="amr_rent_car" type="STANDARD" schema="" session="Main"><![CDATA[USE am_rent_car;]]></console>
+      <console name="amr_rent_car" type="STANDARD" schema="am_rent_car" session="Main"><![CDATA[select * from  amr_reservations;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
@@ -23,7 +23,8 @@
     <open-files />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
-    <filter-actions connection-id="7a63b646-9d9b-4781-b174-3c3039a28090" dataset="am_rent_car.amr_clients" active-filter-id="" />
+    <filter-actions connection-id="7a63b646-9d9b-4781-b174-3c3039a28090" dataset="am_rent_car.amr_invoices" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="7a63b646-9d9b-4781-b174-3c3039a28090" dataset="am_rent_car.amr_clients" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="7a63b646-9d9b-4781-b174-3c3039a28090" dataset="am_rent_car.amr_cars" active-filter-id="">
       <filter id="49972cd0-3845-40c8-b3aa-858be3f5ab5d" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
         <condition column="id_car" operator="=" value="" active="true" />

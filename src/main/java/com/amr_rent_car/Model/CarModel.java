@@ -86,12 +86,11 @@ public class CarModel {
         return listCars;
     }
 
-    public Car getCar(int idCar) {
-        Car car = null;
+    public Car getCar(Car car) {
         try {
             String query = "SELECT * FROM amr_cars WHERE id_car=?";
             PreparedStatement preparedStatement = DBConnect.connect().prepareStatement(query);
-            preparedStatement.setInt(1, idCar);
+            preparedStatement.setInt(1, car.getIdCar());
             ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
                 car = new Car(
@@ -101,7 +100,7 @@ public class CarModel {
                         resultSet.getString("model_car"),
                         resultSet.getString("car_reg"),
                         resultSet.getString("status"),
-                        resultSet.getString("corlorCar"),
+                        resultSet.getString("colorCar"),
                         resultSet.getString("typeCar"),
                         resultSet.getDouble("priceCar"));
             }

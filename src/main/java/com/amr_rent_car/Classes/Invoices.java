@@ -2,13 +2,13 @@ package com.amr_rent_car.Classes;
 
 public class Invoices {
     private int idInvoice;
-    private double fulPayment;
+    private double fullPayment;
     private String dateInvoice, paymentMethod;
 
-    public Invoices(int idInvoice, String dateInvoice, double fulPayment, String paymentMethod) {
+    public Invoices(int idInvoice, String dateInvoice, double fullPayment, String paymentMethod) {
         this.idInvoice = idInvoice;
         this.dateInvoice = dateInvoice;
-        this.fulPayment = fulPayment;
+        this.fullPayment = fullPayment;
         this.paymentMethod = paymentMethod;
     }
 
@@ -29,11 +29,11 @@ public class Invoices {
     }
 
     public double getFulPayment() {
-        return fulPayment;
+        return fullPayment;
     }
 
     public void setFulPayment(double fulPayment) {
-        this.fulPayment = fulPayment;
+        this.fullPayment = fulPayment;
     }
 
     public String getPaymentMethod() {
@@ -46,7 +46,7 @@ public class Invoices {
 
     @Override
     public String toString() {
-        return "Invoices [idInvoice=" + idInvoice + ", dateInvoice=" + dateInvoice + ", fulPayment=" + fulPayment
+        return "Invoices [idInvoice=" + idInvoice + ", dateInvoice=" + dateInvoice + ", fulPayment=" + fullPayment
                 + ", paymentMethod=" + paymentMethod + "]";
     }
 

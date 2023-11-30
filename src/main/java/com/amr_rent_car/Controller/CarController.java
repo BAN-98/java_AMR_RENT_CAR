@@ -5,9 +5,10 @@ import com.amr_rent_car.Classes.Car;
 import com.amr_rent_car.Model.CarModel;
 
 public class CarController {
+
     private final CarModel carModel;
 
-    public CarController() {
+    public CarController(){
         this.carModel = new CarModel();
     }
 
@@ -19,8 +20,8 @@ public class CarController {
         return carModel.getCars();
     }
 
-    public Car getCar(int id) {
-        return carModel.getCar(id);
+    public Car getCar(Car car) {
+        return carModel.getCar(car);
     }
 
     public boolean updateCar(Car car){
